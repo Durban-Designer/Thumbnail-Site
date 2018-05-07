@@ -1,10 +1,12 @@
 This server is designed to serve a quasar built SPA with compression and other performance optimizations
-before beginning on your local machine run **first go through the quasar.conf.js configuration tutorial**
+**first go through the quasar.conf.js configuration tutorial**
+before beginning on your local machine run; 
 
 $ quasar build
 
 this will build an optimized servable version of your quasar application in project_dir/dist/spa-mat/
-copy the entire contents of the folder (Should be an index.html a js, statics, fonts folder, a css file) and paste it in the views folder of this server, then run;
+copy the entire contents of the folder (Should be an index.html a js, statics,  and fonts folder, as well as a css file possibly more) 
+and paste it in the views folder of this server, then run;
 
 $ npm install --save less less-loader axios
 $ npm install
