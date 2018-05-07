@@ -1,0 +1,2 @@
+Replace your applications quasar.conf.js with the included version, change line 94 to your applications cordova id
+if you are using any plugins add them to the plugin section line 6-7 and to the src/plugins folder of yuor quasar project (mapbox is the only usecase we have yet)

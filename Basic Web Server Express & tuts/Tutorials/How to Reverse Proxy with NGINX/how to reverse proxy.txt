@@ -1,0 +1,56 @@
+Before starting verify that your website is accessible via the domain and that you have added a cname entry in your dns for api that points to @,
+this configures a subdomain for the api's use (see attached screenshot). Also verify that your API is running on internal port 81 and that the web server is running on port 8080. 
+This tutorial assumes you are using my express web server which serves an index.html from views to internal port 8080. (check its attached tutorial for more)
+**make sure port 443 and 80 is open on AWS** 
+Use putty to ssh into your AWS ubuntu server EC2 container (https://www.quickvenom.org/ubuntu) 
+
+$ sudo apt-get update
+$ sudo apt-get install nginx
+$ sudo chmod 777 -R /etc/nginx
+$ sudo mkdir /etc/nginx/ssl
+$ sudo rm -rf /etc/nginx/sites-enabled/default
+
+copy default and api from this folder to /etc/nginx/sites-enabled using winscp
+edit each to your proper server name and internal ip address
+generate self signed credentials with;
+
+$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout /etc/nginx/ssl/selfsigned.key -out /etc/nginx/ssl/selfsigned.crt
+
+make sure that your common name matches your domain such as yourapp.com
+
+$ sudo systemctl restart nginx
+$ sudo chmod 777 -R /var/www
+$ sudo cd /var/www/yourapp
+
+copy the web server over now to this directory and run;
+
+$ sudo npm install
+$ sudo pm2 start app.js -i 0 --name "yourapp"
+
+refer to the tutorial included with the web server for more details on building and serving SPA
+
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt-get update
+$ sudo apt-get install certbot
+
+$ sudo certbot certonly --webroot -w /var/www/yourapp/views -d yourapp.com -d www.yourapp.com
+
+change;
+
+ssl_certificate           /etc/nginx/ssl/selfsigned.crt;
+ssl_certificate_key       /etc/nginx/ssl/selfsigned.key;
+
+to;
+
+ssl_certificate           /etc/letsencrypt/live/<yourapp.com>/fullchain.pem;
+ssl_certificate_key       /etc/letsencrypt/live/<yourapp.com>/privkey.pem;
+
+where <yourapp.com> is where lets encrypt makes the certificate,
+itll print it to the console on a sucessful creation
+
+$ sudo systemctl restart nginx
+
+Check online by going to the domain but https and the correct domain should be visible.
+
