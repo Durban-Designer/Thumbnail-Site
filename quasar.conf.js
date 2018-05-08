@@ -6,16 +6,10 @@ module.exports = function (ctx) {
     plugins: [
     ],
     css: [
-      'app.styl'
     ],
     extras: [
-      ctx.theme.mat ? 'roboto-font' : null,
-      'material-icons'
-      // 'ionicons',
-      // 'mdi',
-      // 'fontawesome'
     ],
-    supportIE: false,
+    supportIE: true,
     vendor: {
       add: [],
       remove: []
@@ -23,9 +17,12 @@ module.exports = function (ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
-      // gzip: true,
+      gzip: true,
+      minify: true,
+      webpackManifest: true,
+      sourceMap: true,
       // analyze: true,
-      // extractCSS: false,
+      extractCSS: true,
       // useNotifier: false,
       extendWebpack (cfg) {
         cfg.module.rules.push({
@@ -44,27 +41,11 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
-        'QLayout',
-        'QLayoutHeader',
-        'QLayoutDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QListHeader',
-        'QItem',
-        'QItemMain',
-        'QItemSide'
       ],
       directives: [
-        'Ripple'
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
       ]
     },
     // animations: 'all' --- includes all animations
@@ -110,7 +91,7 @@ module.exports = function (ctx) {
       }
     },
     cordova: {
-      // id: 'org.cordova.quasar.app'
+       id: 'thumbnailsite.thumbnail.com'
     },
     electron: {
       extendWebpack (cfg) {
@@ -129,6 +110,6 @@ module.exports = function (ctx) {
     },
 
     // leave this here for Quasar CLI
-    starterKit: '1.0.3'
+    starterKit: '1.0.2'
   }
 }
