@@ -5,14 +5,12 @@ var port = 81;
 var app = express();
 var router = express.Router();
 var path = __dirname + "/views/";
-require("./user");
-var users = require("./users.js");
-require("./lead");
-var leads = require("./leads.js");
+require("./message");
+var messages = require("./messages.js");
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect("mongodb://admin:123@ds237947.mlab.com:37947/screen-art", {
+mongoose.connect("mongodb://user:123@ds125068.mlab.com:25068/thumbnail", {
   useMongoClient: true
 }, function (error) {
   console.log(error);
@@ -29,8 +27,7 @@ app.use(function(req, res, next) {
   next()
 })
 
-app.use("/users", users);
-app.use("/leads", leads);
+app.use("/messages", messages);
 
 router.get("/", (req,res) => {
   res.sendFile(path + "index.html");
