@@ -7,7 +7,6 @@
         <button class="cloud" v-on:click="navToggle(); $router.push('/cloud')">Cloud</button>
         <button class="mobile" v-on:click="navToggle(); $router.push('/mobile')">Mobile</button>
         <button class="contact" v-on:click="navToggle(); $router.push('/contact')">Contact</button>
-        <button class="blog" v-on:click="navToggle(); $router.push('/blog')">Blog</button>
       </div>
     </div>
   </div>
