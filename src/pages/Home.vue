@@ -7,14 +7,12 @@
     </div>
     <div class="iconbox">
       <div class="icona"></div>
+      <p class="dev">Development</p>
       <div class="iconb"></div>
+      <p class="opt">Optimization</p>
       <div class="iconc"></div>
+      <p class="dep">Deployment</p>
     </div>
-    <div class="label">
-    <p class="dev">Development</p>
-    <p class="opt">Optimization</p>
-    <p class="dep">Deployment</p>
-  </div>
   <p>How can we help you today?</p>
   <div class="buttonBox">
   <button class="jumpToCloud" v-on:click="$router.push('/cloud')">"I need Cloud help!"</button>
@@ -110,7 +108,6 @@ export default {
   }
 
   .infobox {
-    position: absolute;
     width: 100%;
     height: 200px;
     color: @tnblue;
@@ -120,36 +117,39 @@ export default {
   }
 
   .iconbox {
-    position: absolute;
     width: 100%;
-    height: 100px;
+    height: 200px;
     display: grid;
     margin-top: 300px;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 100px;
     margin-left: 0;
     background-color: @tnblue;
 
   }
-  .label {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    font-weight: bold;
-  }
 
   .dev {
-    margin-top: 400px;
+    grid-row: 1;
+    grid-column: 1;
     font-size: .8em;
+    color: white;
+    line-height: 150px;
   }
 
   .opt {
-    margin-top: 400px;
+    grid-row: 2;
+    grid-column: 2;
     font-size: .8em;
+    color: white;
+    line-height: 50px;
   }
 
   .dep {
-    margin-top: 400px;
+    grid-row: 1;
+    grid-column: 3;
     font-size: .8em;
+    color: white;
+    line-height: 150px;
   }
 
   .icona {
@@ -161,6 +161,7 @@ export default {
     height: 100%;
     z-index: 4;
     grid-column: 1;
+    grid-row: 2;
   }
 
   .iconb {
@@ -184,6 +185,7 @@ export default {
     height: 100%;
     z-index: 4;
     grid-column: 3;
+    grid-row: 2;
   }
 
   p {
@@ -213,5 +215,10 @@ export default {
     color: @tnblue;
     text-align: center;
     font-size: 1em;
+  }
+  @media (min-width: 1000px) {
+    p {
+      font-size: 1.5em;
+    }
   }
 </style>

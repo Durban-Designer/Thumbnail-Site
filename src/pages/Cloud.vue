@@ -131,7 +131,7 @@ p {
   color: @tnblue;
   column-rule: 1px solid @tnblue;
   text-align: center;
-  font-size: .2em;
+  font-size: 1em;
   border-top: 1px solid @tnblue;
   padding-top: 5%;
 }
@@ -157,11 +157,7 @@ p {
   }
 
   p {
-    font-size: 6em;
-  }
-
-  .colb {
-    height: 60px;
+    font-size: 1.5em;
   }
 
   h1 {
@@ -173,12 +169,12 @@ p {
   }
 
   p {
-    font-size: 8em;
-    padding-top: 20px;
+    font-size: 1.5em;
   }
 
   h3 {
-    font-size: 2em;
+    font-size: 1.7em;
+    line-height: 40px;
   }
 
   h1 {
@@ -198,12 +194,7 @@ p {
   }
 
   p {
-    font-size: 9em;
-    line-height: 60px;
-  }
-
-  .colc {
-    margin-top: 80px;
+    font-size: 2em;
   }
 }
 </style>

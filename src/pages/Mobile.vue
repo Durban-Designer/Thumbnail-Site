@@ -15,6 +15,8 @@
     </div>
     <h3>Check out our new App <span>Trip Clock Mobile</span>! Available on the Google Play Store and iOS App Store!</h3>
     <div class="appShowcase">
+    <a href='https://play.google.com/store/apps/details?id=tripclockmobile.thumbnail.com&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="playbutton"></a>
+    <a href="https://itunes.apple.com/us/app/trip-clock-mobile/id1387377488?mt=8" class="apple"></a>
     <div class="tcscreen1"></div>
     <div class="tcscreen2"></div>
     <p>Simple and Effective Tools for Increased Productivity:
@@ -67,7 +69,7 @@ h1 {
   font-size: 2.4em;
   right: 0;
   margin-right: 3%;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 h2 {
   position: absolute;
@@ -81,24 +83,22 @@ h2 {
   margin-right: 3%;
 }
 h3 {
-  margin-top: 600px;
+  margin-top: 650px;
   font-size: 1em;
-  width: 90%;
+  width: 100%;
   color: black;
-  margin-left: 5%;
   line-height: normal;
+  text-align: center;
 }
 .mbody {
+  text-align: center;
   position: absolute;
   z-index: 8;
   width: 100%;
   margin-top: 250px;
-  padding-right: 3%;
-  padding-top: 2%;
 }
 
 .mbody1 {
-  line-height: 20px;
   font-size: 1.4em;
   font-family: @base-font;
   color: @tnblue;
@@ -109,19 +109,44 @@ h3 {
   font-size: 0.75em;
   font-family: @base-font;
   color: @tnblue;
+  list-style: none;
 }
 
 .appShowcase {
   margin-top: 0px;
   width: 100%;
-  height: 400px;
+  height: 700px;
   background-color: #751d1d;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 100px 300px 300px;
+}
+.playbutton {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/playbutton.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10%;
+}
+.apple {
+  grid-column: 2;
+  grid-row: 1;
+  width: 80%;
+  height: 100%;
+  background-image: url('../assets/apple.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 .tcscreen1 {
   grid-column: 1;
+  grid-row: 2;
   width: 100%;
   height: 100%;
   background-image: url('../assets/tcscreen1.png');
@@ -132,6 +157,7 @@ h3 {
 }
 .tcscreen2 {
   grid-column: 2;
+  grid-row: 2;
   width: 100%;
   height: 100%;
   background-image: url('../assets/tcscreen2.png');
@@ -141,11 +167,11 @@ h3 {
   margin-top: 10%;
 }
 p {
-  font-size: 1.2em;
+  font-size: 1.4em;
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row: 2;
-  margin-top: 60px;
+  grid-row: 3;
+  margin-top: 100px;
   color: white;
   text-align: center;
   margin-left: 5%;
@@ -154,17 +180,15 @@ p {
 span {
   color: red;
 }
-@media (min-width: 400px) {
-
 @media only screen and (min-width: 700px) {
   h1 {
-    margin-top: 10%;
+    margin-top: 100px;
     font-size: 2.5em;
   }
   h2 {
     font-size: 1.8em;
     height: 40px;
-    margin-top: 240px;
+    margin-top: 200px;
   }
   .mbanner {
     background-image: url('../assets/mobile2.jpg');
@@ -187,18 +211,22 @@ span {
     position: absolute;
     width: 94%;
     height: 100%;
-    margin-top: 300px;
+    margin-top: 250px;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 10px;
   }
   .mbody1 {
-    line-height: 20px;
+    line-height: 1em;
+    font-size: 1.7em;
+  }
+  .mbody2 {
+    line-height: 2em;
     font-size: 1em;
   }
-  .mbody2 {
-    line-height: 20px;
-    font-size: 0.9em;
+  .apple {
+    height: 70%;
+    margin-top: 50px;
   }
 }
 
@@ -208,132 +236,43 @@ span {
     width: 100%;
     font-family: @base-font;
   }
-  .mbanner {
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    z-index: 7;
-    background-color: #989898;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .mbody {
     position: absolute;
-    width: 73%;
+    width: 90%;
     height: 100%;
-    margin-top: 210px;
+    margin-top: 250px;
     margin-left: 2%;
     padding-left: 2%;
     margin-right: 0%;
-    margin-bottom: 10px;
-  }
-  h1 {
-    color: #fff;
-    text-align: right;
-    font-size: 2.5em;
-    margin-right: 10px;
+    margin-bottom: 20px;
   }
   h2 {
     color: #fff;
-    text-align: center;
     font-size: 1.75em;
   }
-}
-@media only screen and (min-width:1000px) {
-  .main {
-    height: 100%;
-    width: 100%;
-    font-family: @base-font;
-  }
-  .mbanner {
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    z-index: 7;
-    background-color: #989898;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .overlay {
-    height: 500px;
-  }
-  .mbody {
-    width: 96%;
-    height: 100%;
-    margin-top: 520px;
-    margin-left: 2%;
-    padding-left: 2%;
-    margin-right: 0%;
-    margin-bottom: 10px;
-  }
-  h1 {
-    font-size: 3.5em;
-    margin-right: 10px;
-  }
-  h2 {
-    font-size: 2.5em;
-    margin-top: 425px;
-  }
-  .mbody1 {
-    line-height: 40px;
-    font-size: 2em;
-    padding-top: 25px;
-    padding-bottom: 10px;
-  }
   .mbody2 {
-    line-height: 40px;
-    font-size: 1.75em;
-    padding-bottom: 10px;
+    font-size: 1em;
   }
-
-}
-@media only screen and (min-width:1400px) {
-  .main {
+  .appShowcase {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tcscreen1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .tcscreen2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .apple {
+    grid-column: 3;
+    grid-row: 1;
     height: 100%;
-    width: 100%;
-    font-family: @base-font;
+    width: 90%;
   }
-  .mbanner {
-    width: 100%;
-    height: 1000px;
-    position: absolute;
-    z-index: 7;
-    background-color: #989898;
-    background-size: cover;
-    background-repeat: no-repeat;
+  .playbutton {
+    grid-column: 3;
+    grid-row: 2;
   }
-  .overlay {
-    height: 1000px;
-  }
-  .mbody {
-    width: 96%;
-    height: 100%;
-    margin-top: 1050px;
-    margin-left: 2%;
-    padding-left: 2%;
-    margin-right: 0%;
-    margin-bottom: 10px;
-  }
-  h1 {
-    margin-top: 0;
-    font-size: 7em;
-    margin-right: 10px;
-  }
-  h2 {
-    font-size: 5em;
-    margin-top: 850px;
-  }
-  .mbody1 {
-    line-height: 80px;
-    font-size: 5em;
-    padding-top: 25px;
-    padding-bottom: 30px;
-  }
-  .mbody2 {
-    line-height: 80px;
-    font-size: 4.5em;
-    padding-bottom: 30px;
-  }
-}
 }
 </style>
