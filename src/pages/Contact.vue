@@ -3,7 +3,7 @@
     <div class="banner"></div>
     <div class="overlay"></div>
     <h1>Contact<br/>Us</h1>
-    <h2>We Look Forward To Hearing from You!</h2>
+    <h2>We Look Forward<br/> To Hearing from You!</h2>
       <div class="contactBox">
         <input class="name" v-model="name" placeholder="Name">
         <input class="email" v-model="email" placeholder="Email">
@@ -78,7 +78,7 @@ h2 {
   color: #fff;
   text-align: right;
   z-index: 8;
-  font-size: 1.9em;
+  font-size: 1.5em;
   right: 0;
   margin-right: 10px;
   width: 100%;

@@ -55,6 +55,7 @@ export default {
     font-size: 2.3em;
     right: 0;
     margin-right: 10px;
+    margin-top: 100px;
   }
 
   h2 {
@@ -124,7 +125,7 @@ export default {
     height: 100px;
     display: grid;
     margin-top: 300px;
-    grid-template-columns: 1fr 100px 1fr 100px 1fr 100px 1fr;
+    grid-template-columns: repeat(3,1fr);
     margin-left: 0;
     background-color: @tnblue;
 
@@ -155,31 +156,34 @@ export default {
     background-image: url('../assets/development_Icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     z-index: 4;
-    grid-column: 2;
+    grid-column: 1;
   }
 
   .iconb {
     background-image: url('../assets/optimization_Icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 100%;
     height: 100%;
     z-index: 4;
-    grid-column: 4;
+    grid-column: 2;
 
   }
 
   .iconc {
     background-image: url('../assets/Deployment_Icon.svg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
     height: 100%;
     z-index: 4;
-    grid-column: 6;
+    grid-column: 3;
   }
 
   p {
@@ -191,18 +195,6 @@ export default {
   }
 
   @media (min-width: 400px) {
-    .icona {
-      margin-left: 10%;
-    }
-    .iconb {
-      margin-left: 10%;
-    }
-    .iconc {
-      margin-left: 10%;
-    }
-    .icona {
-      margin-left: 10%;
-    }
     .dev {
       font-size: 1em;
     }
@@ -219,7 +211,6 @@ export default {
     width: 100%;
     height: 200px;
     color: @tnblue;
-    margin-top: 450px;
     text-align: center;
     font-size: 1em;
   }

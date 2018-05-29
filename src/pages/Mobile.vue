@@ -3,7 +3,7 @@
     <div class="mbanner"></div>
     <div class="overlay"></div>
     <h1>Mobile<br/>Development</h1>
-    <h2>Cutting edge technologies, At your fingertips.</h2>
+    <h2>Cutting edge technologies,<br/> At your fingertips.</h2>
     <div class="mbody">
       <p class="mbody1"> We can refine that rough idea into a <b>smoothly-polished gem.</b> </p>
       <ul>
@@ -13,14 +13,13 @@
         <li class="mbody2"><b>Of Superior Quality,</b> tested and ensured to work seamlessly from launch.</li>
       </ul>
     </div>
-    <h3>Check out our most recent App! Available on the Google Play Store and iOS App Store!</h3>
+    <h3>Check out our new App <span>Trip Clock Mobile</span>! Available on the Google Play Store and iOS App Store!</h3>
     <div class="appShowcase">
     <div class="tcscreen1"></div>
-    <p class="tx1">Simple and Effective Tools for Increased Productivity</p>
     <div class="tcscreen2"></div>
-    <p class="tx2">Mileage Tracking, Clock Functionality, Data and Productivity Analytics</p>
-    <div class="tcscreen3"></div>
-    <p class="tx3">Time Crunch is the Answer to All Your Mobile Employee Management Needs</p>
+    <p>Simple and Effective Tools for Increased Productivity:
+      Mileage Tracking, Clock Functionality, Data Analytics.
+      Trip Clock Mobile is the Answer to All Your Mobile Employee Management Needs.</p>
   </div>
   </div>
 
@@ -68,43 +67,45 @@ h1 {
   font-size: 2.4em;
   right: 0;
   margin-right: 3%;
-  margin-top: 15%;
+  margin-top: 100px;
 }
 h2 {
   position: absolute;
   color: #fff;
-  text-align: center;
+  text-align: right;
   z-index: 8;
   font-size: 1.5em;
   right: 0;
   width: 100%;
-  margin-top: 240px;
+  margin-top: 220px;
+  margin-right: 3%;
 }
 h3 {
-  margin-top: 500px;
+  margin-top: 600px;
   font-size: 1em;
   width: 90%;
-  color: #c22227;
+  color: black;
   margin-left: 5%;
+  line-height: normal;
 }
 .mbody {
   position: absolute;
   z-index: 8;
-  width: 94%;
-  margin-top: 300px;
-  margin-left: 3%;
+  width: 100%;
+  margin-top: 250px;
+  padding-right: 3%;
   padding-top: 2%;
 }
 
 .mbody1 {
-  line-height: 15px;
-  font-size: 0.8em;
+  line-height: 20px;
+  font-size: 1.4em;
   font-family: @base-font;
   color: @tnblue;
 }
 
 .mbody2 {
-  line-height: 15px;
+  line-height: 30px;
   font-size: 0.75em;
   font-family: @base-font;
   color: @tnblue;
@@ -114,71 +115,44 @@ h3 {
   margin-top: 0px;
   width: 100%;
   height: 400px;
-  background-color: #c22227;
+  background-color: #751d1d;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px 200px;
-
 }
 .tcscreen1 {
   grid-column: 1;
-  grid-row: 1;
   width: 100%;
   height: 100%;
-  margin-left: 5%;
   background-image: url('../assets/tcscreen1.png');
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   margin-top: 10%;
-}
-.tx1 {
-  grid-column: 1;
-  grid-row: 2;
-  color: #fff;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-left: 5%;
-
-  font-size: .8em;
 }
 .tcscreen2 {
   grid-column: 2;
-  grid-row: 2;
   width: 100%;
   height: 100%;
-  margin-left: 5%;
   background-image: url('../assets/tcscreen2.png');
   background-size: contain;
-  background-repeat: no-repeat;
-}
-.tx2 {
-  grid-column: 2;
-  grid-row: 1;
-  color: #fff;
-  font-size: .8em;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: center;
-}
-.tcscreen3 {
-  grid-column: 3;
-  grid-row: 1;
-  width: 100%;
-  height: 100%;
-  margin-left: 5%;
-  background-image: url('../assets/tcscreen3.png');
-  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   margin-top: 10%;
 }
-.tx3 {
-  grid-column: 3;
+p {
+  font-size: 1.2em;
+  grid-column-start: 1;
+  grid-column-end: 3;
   grid-row: 2;
-  color: #fff;
-  font-size: .8em;
-  font-weight: bold;
-  margin-top: 20px;
+  margin-top: 60px;
+  color: white;
+  text-align: center;
   margin-left: 5%;
+  margin-right: 5%;
+}
+span {
+  color: red;
 }
 @media (min-width: 400px) {
 
@@ -313,7 +287,7 @@ h3 {
   }
 
 }
-@media only screen and (min-width:2000px) {
+@media only screen and (min-width:1400px) {
   .main {
     height: 100%;
     width: 100%;
@@ -341,6 +315,7 @@ h3 {
     margin-bottom: 10px;
   }
   h1 {
+    margin-top: 0;
     font-size: 7em;
     margin-right: 10px;
   }

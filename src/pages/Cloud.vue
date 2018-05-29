@@ -12,12 +12,12 @@
     <div class="icons">
       <div class="salesforce"></div>
       <div class="amazon"></div>
+    </div>
       <div class="infobox">
         <p class="cola">Need an application or custom engine that isn’t available on the App Exchange? <b>We can create it.</b></p>
         <p class="colb"><b>Optimization</b> for organizations who are trying to make Salesforce work better for their business processes.</p>
         <p class="colc">New setup, security, training, reports, and professional <b>guidance on best practices.</b></p>
       </div>
-    </div>
   </div>
 </template>
 
@@ -65,7 +65,7 @@ h1 {
   z-index: 8;
   font-size: 2.5em;
   right: 0;
-  margin-right: 1%;
+  margin-right: 3%;
 }
 
 h2 {
@@ -104,6 +104,7 @@ h3 {
   background-image: url('../assets/sf.svg');
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 100%;
   height: 200px;
 }
@@ -112,6 +113,7 @@ h3 {
   background-image: url('../assets/aws.svg');
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 100%;
   height: 200px;
 }
@@ -120,10 +122,6 @@ p {
   margin-left: 5%;
   width: 90%;
   text-align: center;
-}
-
-.colb {
-  height: 100px;
 }
 
 .infobox {
@@ -172,7 +170,6 @@ p {
 }
 @media (min-width: 1000px) {
   .salesforce {
-    margin-left: 10%;
   }
 
   p {
@@ -190,7 +187,6 @@ p {
 }
 @media (min-width: 1400px) {
   .salesforce {
-    margin-left: 20%;
   }
 
   h1 {
@@ -202,7 +198,7 @@ p {
   }
 
   p {
-    font-size: 12em;
+    font-size: 9em;
     line-height: 60px;
   }
 
